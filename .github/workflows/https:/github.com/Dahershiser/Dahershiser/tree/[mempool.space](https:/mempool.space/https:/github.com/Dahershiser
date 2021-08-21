@@ -1,0 +1,67 @@
+
+
+name: https://github.com/Dahershiser
+
+on: [mempool.space](https://mempool.space/)
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+```bash
+  # backend
+  cd backend
+  npm install
+  npm run build
+```
+
+
+  # 
+  build:  `mempool-config.json`
+    # 
+    runs-on: ubuntu-latest
+
+    # credentials:
+```bash
+{
+  "MEMPOOL": {
+    "NETWORK": "mainnet",
+    "BACKEND": "electrum",
+    "HTTP_PORT": 8999,
+    "API_URL_PREFIX": "/api/v1/",
+    "POLL_RATE_MS": 2000
+  },
+  "CORE_RPC": {
+    "USERNAME": "mempool",
+    "PASSWORD": "71b61986da5b03a5694d7c7d5165ece5"
+  },
+  "ELECTRUM": {
+    "HOST": "127.0.0.1",
+    "PORT": 50002,
+    "TLS_ENABLED": true,
+  },
+  "DATABASE": {
+    "ENABLED": true,
+    "HOST": "127.0.0.1",
+    "PORT": 3306,
+    "USERNAME": "mempool",
+    "PASSWORD": "mempool",
+    "DATABASE": "mempool"
+  },
+  "STATISTICS": {
+    "ENABLED": true,
+    "TX_PER_SECOND_SAMPLE_PERIOD": 150
+  }
+}
+```
+
+      
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      
+      - name: Run a multi-line script
+        run: |one line script
+          

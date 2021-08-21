@@ -5,7 +5,7 @@ My first repository 😘
 
 
 Hiya it's Des 
-   
-I gotta live my blue putty!!🥰
-
+ #its my first time help me out please..
+I gotta live my blue pitty!!🥰
+#im learning !! 
 
